@@ -1,0 +1,49 @@
+
+body {
+	font-family: Arial, sans-serif;
+    background: linear-gradient(#cdfbff, #f9e3ff, #ecb2ff, #989aff);
+}
+
+.container {
+	width: 80%;
+	margin: 40px auto;
+	text-align: center;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.photo {
+	margin: 20px;
+	width: 250px;
+}
+
+.photo img {
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.photo p {
+    margin-top: 10px;
+}
+
+.video {
+	margin: 20px;
+	width: 400px;
+}
+
+.video iframe {
+	width: 100%;
+	height: 225px;
+	border-radius: 10px;
+}
+
+.video p {
+	margin-top: 10px;
+}
+

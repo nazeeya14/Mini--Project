@@ -1,0 +1,138 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+    <link rel="stylesheet" href="login.css"> <!-- Link to login CSS -->
+</head>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Arial',sans-serif;
+
+}
+
+
+ body{
+    background:linear-gradient(#f2fbe6,#cff6e1,#b7aee2);
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-size: 25px;
+ }
+.login-box{
+    padding: 55px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 4px 6px rgba(0, 0, 0,0.1);
+    background: linear-gradient(to bottom right, #f6e1d3, #f6e1d3);
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width:300px; */
+}
+h2{
+    color:hsl(341, 100%, 69%);
+    text-align:center;
+    margin-bottom:20px;
+}
+.input-group{
+    margin-bottom:20px;
+    text-align:left;
+}
+.input-group label{
+    font-size:20px;
+    color:black;
+    display: block;
+    margin-bottom: 10px;
+}
+.input-group input{
+    width:100%;
+    padding:10px;
+    border: 2px solid #ccc;
+    border-radius:5px;
+    font-size:20px;
+    background-color:#fff9e0;
+    margin-bottom: 10px;
+}
+.input-group input:focus{
+    outline:none;
+    border-color:#5ce1b0;
+    background-color:#fff;
+}
+.login-box button{
+    width:100%;
+    padding:10px;
+    background-color:#ff93b5;
+    border:none;
+    border-radius:5px;
+    color: white;
+    font-size:20px;
+    cursor:pointer;
+    transition:background-color 0.4s ease;
+}
+
+.login-box button:hover{
+    background-color:hsl(341, 100%, 69%);
+}
+.login-box button:active{
+    background-color:hsl(341, 100%, 59%);
+}
+
+.error{
+    color:red;
+    font-size:18px;
+    margin-top:10px;
+}
+
+
+
+</style>
+
+<body>
+
+    <div class="login-box">
+        <h2>Login</h2>
+        <form id="loginform">
+            <div class="input-group">
+                <label for="Username">Username</label>
+                <input type="text" id="username" placeholder="Enter Username">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter Password">
+            </div>
+        </form>
+            <button onclick="login()">Login</button>
+        
+        <p id="errorMsg" class="error"></p>
+    </div> 
+   
+    <script>
+        // login.js
+        function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const errorMsg = document.getElementById("errorMsg");
+
+
+            if (username === "admin" && password === "1431") {
+                window.location.href = 'index.html'; // Redirect to home page
+            } else {
+                errorMsg.textContent = "Invalid username or password.";
+            }
+        }
+
+    </script> <!-- Link to login JS -->
+</body>
+
+</html>

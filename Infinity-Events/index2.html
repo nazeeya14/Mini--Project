@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="service-card" onclick="navigateTo('venue.html')">
+        <img src="images/venue.png" alt="Venue Selection">
+        <h3>Venue Selection</h3>
+        <p>To choose the perfect spot for your event. Click Location.</p>
+    </div>
+    <div class="service-card" onclick="navigateTo('invitation.html')">
+        <img src="images/invitation.png" alt="Invitation Card">
+        <h3>Invitation Card</h3>
+        <p>Design and send beautiful invitations to all your guests.</p>
+    </div>
+    <div class="service-card" onclick="navigateTo('entertainment.html')">
+        <img src="images/entertainment.png" alt="Entertainment">
+        <h3>Entertainment</h3>
+        <p>Plan the evening's Entertainment with live music or a DJ.</p>
+    </div>
+    <div class="service-card" onclick="navigateTo('food.html')">
+        <img src="images/food.png" alt="Food And Drinks">
+        <h3>Food And Drinks</h3>
+        <p>Finalize your Catering options from appetizers to desserts.</p>
+    </div>
+    <div class="service-card" onclick="navigateTo('photos.html')">
+        <img src="images/photos.png" alt="Photos And Videos">
+        <h3>Photos And Videos</h3>
+        <p>Our professional Media team will capture all the special moments.</p>
+    </div>
+    <div class="service-card" onclick="navigateTo('custom.html')">
+        <img src="images/custom.png" alt="Custom Foods">
+        <h3>Custom Foods</h3>
+        <p>Enhance your event with Specialties from our custom menu.</p>
+    </div>
+//css.service-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer; /* Indicate it's clickable */
+    transition: transform 0.3s ease-in-out;
+    /* You might need to adjust width/margin depending on your layout */
+    width: 280px; /* Example fixed width */
+    margin-bottom: 20px; /* Example spacing if stacked */
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-card img {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* If you want to arrange them in a grid when they are together */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Spacing between cards */
+    justify-content: center; /* Center the cards if they don't fill the row */
+}
+//js code
+function navigateTo(url) {
+    window.location.href = url;
+}
